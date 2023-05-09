@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <%- include('front_parts/header.ejs') %>
+   </head>
+   <body class="<%= page_name %>">
+       <%- include('front_parts/sidebar.ejs') %>
+       
+       <section>
+          <div class="container">
+             <div class="row goaldel">
+                   <div class="agbtn">
+                               <a href="addgoal" class="btn btn-primary btn-sm">Add Goal</a>
+                           </div>
+                           <% if (messages.delgoal) { %>
+                    	<div class="alert alert-success1 alert-dismissible">
+                             <%- messages.delgoal %>
+                    	</div>
+                        <% } %>
+               <div class="col-12 mt-4 text-white">
+                  <div class="card card-default">
+                          <div class="card-header">
+                            <h3 class="card-title">Batch of Goals</h3>
+                          </div>
+                        
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                               <% if(data.length){
+                            for(var i = 0; i< data.length; i++) { 
+                            if(i%2==0) {
+                            %>
+                            <div class="alert alert-warning">
+                              <div class="row">
+                                  <div class="col-7 goaltitle">
+                                    <h6><b><%= data[i].noofgoals %> Goals added on</b></h6>
+                                    <p> <%= data[i].gdate%></p>
+                                  </div>
+                                 
+                                  <div class="col-5 ">
+                                    <a href="viewgoal/<%= data[i].group_id%>" style="float:right;" class="btn btn-primary btn-sm">View Goals</a>
+                                  </div>
+                              </div>
+                            </div>
+                            <% } else{ %>
+                            <div class="alert alert-info ">
+                              <div class="row">
+                                  <div class="col-7 goaltitle">
+                                      <h6><b><%= data[i].noofgoals %> Goals added on</b></h6>
+                                        <p> <%= data[i].gdate%></p> 
+                                  </div>
+                                 
+                                  <div class="col-5 ">
+                                    <a href="viewgoal/<%= data[i].group_id%>" style="float:right;" class="btn btn-primary btn-sm">View Goals</a>
+                                  </div>
+                              </div>
+                            </div>
+                             <% } } } %> 
+                            
+                          </div>
+              <!-- /.card-body -->
+            </div>
+        </div>
+                           
+             </div>
+            
+          </div>
+       </section>
+
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script>
+       
+function remove_tr(id)
+
+{
+   $('#row'+id).remove();
+}
+      </script>
+   </body>
+</html>

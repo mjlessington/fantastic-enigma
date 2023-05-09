@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <%- include('front_parts/header.ejs') %>
+   </head>
+   <body class="<%= page_name %>">
+      <%- include('front_parts/sidebar.ejs') %>
+      <section>
+         <div class="container">
+            <% if(data.length){ %>
+            <div class="row contbg-fvrtimg">
+               <div class="col-12 text-center maintxtfvpg">
+                  <div class="back-btn pb-4">
+                     <button onclick="history.back()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19.811" height="9.621" viewBox="0 0 19.811 9.621">
+                           <path id="Path_28" data-name="Path 28" d="M6.75,15.75,3,12m0,0L6.75,8.25M3,12H21" transform="translate(-1.939 -7.189)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                        </svg>
+                     </button>
+                  </div>
+                  <h3>"Repetition is the secret to success"</h3>
+               </div>
+               <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3 px-0">
+                  
+                   <%  for(var i = 0; i< data.length; i++) { %>
+                  <div class="col">
+                     <a href="audioplay/<%= data[i].audioid%>">
+                        <div class="p-2">
+                           <div class="card">
+                              <img src="/assets/images/svg/sound.svg" class="img-fluid tpcrd-icon" alt="...">
+                              <img src="/assets/audio_images/<%= data[i].audioimg%>" class="img-fluid" alt="...">
+                              <div class="card-detail">
+                                 <div class="row">
+                                          <div class="col-9">
+                                           <h3><%= data[i].audiotitle%></h3>
+                                           <p><%= data[i].duration%>sec</p>
+                                          </div> 
+                                          <div class="col-3">
+                                           <a href="/favremo/<%= data[i].audioid%>" onclick="return confirm('Are you sure you want to remove this audio in favorites list?');"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                          </div> 
+                                  </div>
+                              </div>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  
+                 <% }  %>
+               </div>
+            </div>
+            <% } else { %>
+             <div class="row contbg-fvrtimg1">
+               <div class="col-12 text-center maintxtfvpg">
+                  <div class="back-btn pb-4">
+                     <button onclick="history.back()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19.811" height="9.621" viewBox="0 0 19.811 9.621">
+                           <path id="Path_28" data-name="Path 28" d="M6.75,15.75,3,12m0,0L6.75,8.25M3,12H21" transform="translate(-1.939 -7.189)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                        </svg>
+                     </button>
+                  </div>
+                  <h3>"Repetition is the secret to success"</h3>
+               </div>
+               <div class="row row-cols-12 row-cols-lg-12 g-2 g-lg-3 px-0">
+                  <div class="col">
+                    <h3 style="text-align:center;"><b>No list found</b></h3>
+                  </div>
+               </div>      
+              </div> 
+            <% } %>
+         </div>
+      </section>
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      
+   </body>
+</html>

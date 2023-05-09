@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+   <head>
+     <%- include('front_parts/header.ejs') %>
+   </head>
+   <body class="<%= page_name %>">
+      <?php //include 'include/sidebar.php';?>
+       
+       <section>
+          <div class="container">
+             <div class="row">
+                <div class="col-12 py-4 main-conthm">
+               <h3>SIGNUP</h3>
+               <p>Fill up form to signup</p>
+                <% if (messages.useregi) { %>
+            	<div class="alert alert-success1 alert-dismissible">
+                     <%- messages.useregi %>
+            	</div>
+                <% } %>
+                 <% if (messages.useregie) { %>
+            	<div class="alert alert-danger alert-dismissible">
+                     <%- messages.useregie %>
+            	</div>
+                <% } %>
+               <div class="mainboxxhm">
+                   <form action="registration" method="post">
+                  <div class="mb-3">
+                    <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
+                    <input type="text" class="form-control" name="uname" id="exampleFormControlInput1" placeholder="Name">
+                  </div>
+                  <div class="mb-3">
+                    <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
+                    <input type="email" class="form-control" name="uemail" id="floatingPassword" placeholder="username@gmail.com">
+                  </div>
+                  <label for="exampleFormControlInput1" class="form-label mb-1">Gender</label>
+                  <div class="sectboxxsignup mb-3">
+                     <div class="radio">
+                       <input type="radio" name="gender" id="one" value="Male">
+                       <label for="one">Male</label>
+                       <input type="radio" name="gender" id="two" value="Female">
+                       <label for="two">Female</label>
+                       <input type="radio" name="gender" id="three" value="Doesn’t Matter">
+                       <label for="three">Doesn’t Matter</label>
+                   </div>
+                  </div>
+                  <div class="mb-3">
+                    <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="work" rows="3" placeholder="What do you do for work?"></textarea>
+                  </div>
+                  <div class="mainrdolbl mb-2"><label for="exampleFormControlInput1" class="form-label mb-1">Do you promise to commit to this?</label></div>
+                   <div class="rdobtndwnpg mb-3">
+                      <div class="form-check">
+                       <input class="form-check-input" type="radio" name="promise" id="slctone1" value="Yes">
+                       <label class="form-check-label" for="slctone1">Yes</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="promise" id="slctone2" value="No">
+                       <label class="form-check-label" for="slctone2">No</label>
+                     </div>
+                   </div>
+                   <div class="mainrdolbl mb-2"><label for="exampleFormControlInput1" class="form-label mb-1">Do you prefer to be told or do you prefer to tell yourself?</label></div>
+                   <div class="rdobtnfuledt mb-3">
+                      <div class="form-check">
+                       <input class="form-check-input" type="radio" name="prefer" id="slcttwo1" value="I am resilient">
+                       <label class="form-check-label" for="slcttwo1">"I" am resilient</label>
+                     </div>
+                     <div class="form-check">
+                       <input class="form-check-input" type="radio" name="prefer" id="slcttwo2" value="You are resilient">
+                       <label class="form-check-label" for="slcttwo2">"You" are resilient.</label>
+                     </div>
+                   </div>
+                   <hr>
+                   <div class="specer"></div>
+                   <div class="mb-3 mt-4">
+                    <!-- <label for="exampleFormControlInput1" class="form-label">Password</label> -->
+                    <input type="password" class="form-control" id="exampleFormControlInput1" name="pwd" placeholder="Password">
+                  </div>
+                  <div class="mb-3">
+                    <!-- <label for="exampleFormControlInput1" class="form-label">Confirm Password</label> -->
+                    <input type="password" class="form-control" id="exampleFormControlInput1" name="cpwd"  placeholder="Confirm Password">
+                  </div>
+                  <div class="mb-4">
+                     <button type="submit" name="rsbn" class="btn-hmmain">SIGNUP</button>
+                  </div>
+                  <div class="mb-3 text-center text-dark mainboxxhmlst"><p>Already Account? <a href="/">Login</a></p></div>
+                  </form>
+              </div>
+              <h3 class="dwntxtsiguppg">"The best investment is the investment in self"</h3>
+              <div class="pstnrltv"><div class="snguppg-lstcont"><i class="fas fa-angle-right"></i></div></div>
+              <div class="specer"></div>
+             </div>
+          </div>
+       </div>
+       </section>
+
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script>
+         
+      </script>
+   </body>
+</html>

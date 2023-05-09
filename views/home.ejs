@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+   <head>
+       <%- include('front_parts/header.ejs') %>
+   </head>
+   <body class="<%= page_name %>">
+       <%- include('front_parts/sidebar.ejs') %>
+      <section class="">
+         <div class="container">
+            <div class="row homepg-tpbg">
+               <div class="col-12 mb-3 text-center homemaintxt">
+                  <h3>"Repetition is the secret to success"</h3>
+               </div>
+               <div class="col-12 px-0">
+                  <div class="owl-carousel owl-theme">
+                    
+                    <% if(data.length){
+                            for(var i = 0; i< data.length; i++) { %>
+                     <div class="item">
+                        
+                           <div class="col">
+                              <div class="p-1">
+                                 <div class="card">
+                                    <img src="/assets/images/svg/sound.svg" class="img-fluid tpcrd-icon" alt="...">
+                                     <a href="/audioplay/<%= data[i].audioid%>"><img src="/assets/audio_images/<%= data[i].audioimg%>" class="img-fluid main-img" alt="..."></a>
+                                    <div class="card-detail">
+                                     
+                                      <div class="row">
+                                           
+                                          <div class="col-9">
+                                              <a href="/audioplay/<%= data[i].audioid%>">
+                                           <h3><%= data[i].audiotitle%></h3>
+                                           </a>
+                                          </div> 
+                                          
+                                          <div class="col-3">
+                                            <% 
+                                            if(data3.length){
+                                            let audioArr = Object.values(JSON.parse(JSON.stringify(data3)));
+                                                 //console.log(audioArr);
+                                                // console.log(audioArr.find(o => o.audioid === data[i].audioid)) 
+                                                if(audioArr.find(o => o.audioid === data[i].audioid)){ %>
+                                                    <a href="/favremo/<%= data[i].audioid%>" onclick="return confirm('Are you sure you want to remove this audio in favorites list?');"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                                <% } else { %>
+                                                    <a href="/favadd/<%= data[i].audioid%>" onclick="return confirm('Are you sure you want to add this audio in favorites list?');"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                                <% } %>
+                                            <% }else { %>
+                                                <a href="/favadd/<%= data[i].audioid%>" onclick="return confirm('Are you sure you want to add this audio in favorites list?');"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                            <% } %>
+                                          </div> 
+                                      </div>
+                                       <a href="/audioplay/<%= data[i].audioid%>">
+                                      <div class="row">
+                                          <div class="col-7">
+                                                <p><%= data[i].catname%></p>
+                                          </div>
+                                          <div class="col-5">
+                                              <p style="float: right;"><%= data[i].duration%>sec</p>
+                                          </div>
+                                      </div>
+                                      </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        
+                     </div>
+                      <% } } %>
+                  
+                  </div>
+                  <div class="col-12 my-3 mainspacer">
+                     <a href="listgoal"><button type="button" class="btn-hmmain">MY GOALS</button></a>
+                     <div class="col-12 goaladd-cont">
+                        <ul>
+                             <% 
+                             if(data2.length){
+                            for(var i = 0; i< data2.length; i++) { %>
+                            <li> <i class="fas fa-circle"></i> <%= data2[i].golas%></li>
+                          
+                            <% } } %>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script>
+           $('.owl-carousel').owlCarousel({
+             center: true,
+             items:2,
+             loop:true,
+             margin:10,
+             responsive:{
+                 600:{
+                     items:2
+                 }
+             }
+         });
+               
+      </script>
+   </body>
+</html>

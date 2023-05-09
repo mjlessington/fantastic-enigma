@@ -1,0 +1,276 @@
+<style>
+   
+   button {
+   color: inherit;
+   background: transparent;
+   border: none;
+   outline: none;
+   }
+   .no-transition {
+   transition: none !important;
+   }
+   .header {border-radius: 0px;position: relative;padding: 0rem 0.6rem;background: #373737;}
+   .header .navbar {
+   display: flex;
+   align-items: center;
+   }
+   .header .navbar .vertical-logo {
+   font-size: 1.7rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #d93622;
+   }
+   .header .navbar .top-menu-wrapper {
+   color: #221f1f;
+   }
+   .header .navbar .top-menu-wrapper::before {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+   transition: background 0.5s;
+   }
+   .header .navbar .open-mobile-menu i {
+   color: #221f1f;
+   }
+   .header .navbar .top-menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   z-index: 2;
+   transform: translate3d(-100%, 0, 0);
+   transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+   }
+   .header .navbar .top-menu {display: flex;flex-direction: column;width: 100%;overflow-y: auto;padding: 1.5rem 1.5rem;height: 100vh;background-color: #373737;color: #fff;background-image: url(/assets/images/nevbar-back.png);background-repeat: no-repeat;background-position: bottom;background-size: contain;}
+   .header .navbar .top-menu-wrapper.show-offcanvas::before {
+   background: rgba(0, 0, 0, 0.5);
+   z-index: 1;
+   }
+   .header .navbar .top-menu-wrapper.show-offcanvas .panel,
+   .header .navbar .top-menu-wrapper.show-offcanvas .top-menu {
+   transform: translate3d(0, 0, 0);
+   transition-duration: 0.7s;
+   }
+   .header .navbar .top-menu-wrapper.show-offcanvas .top-menu {
+   transition-delay: 0.2s;
+   }
+   .header .navbar ul a {display: inline-block;letter-spacing: 0px;color: #F3F3F3;font-size: 18px;line-height: 21px;font-weight: 500;transition: color 0.35s ease-out;
+   }
+   .header .navbar ul a:hover {
+   color: #fff;
+   text-decoration: blink;
+   }
+   .header .navbar .has-dropdown i {
+   display: none;
+   }
+   .header .navbar .sub-menu {
+   padding: 0.5rem 1.5rem 0 1.5rem;
+   }
+   .header .navbar .sub-menu a {
+   text-transform: capitalize;
+   font-size: 1rem;
+   font-weight: 400;
+   margin-top: 0rem;
+   }
+   .header .navbar .top-menu li + li {
+   margin-top: 1.3rem;
+   }
+   .header .navbar .top-menu .mob-block {
+   display: inline-flex;
+   align-items: center;
+   justify-content: space-around;
+   margin-bottom: 2rem;
+   }
+   .header .navbar .top-menu .mob-block .logo {
+   font-size: 1.7rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #d93622;
+   }
+   .header .navbar .top-menu .mob-block i {
+   color: #221f1f;
+   }
+   /*close icon*/
+   .wrap {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   flex-wrap: wrap;
+   }
+   .burger {
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+   transition: all .5s ease;
+   }
+   .burger:hover {
+   background: rgb(56 56 56);
+   }
+   .strip div {
+   height: 3px;
+   border-radius: 2px;
+   background: #fff;
+   margin: 7px;
+   transition: all .55s cubic-bezier(0.075, 0.82, 0.165, 1);
+   width: 20px;
+   }
+   .burger:hover .strip div {
+   background: white;
+   }
+   /* BURGER 1 */
+   .burger-strip div:first-child {
+   width: 28px;
+   }
+   .burger-strip div:last-child {
+   width: 28px;
+   }
+   .burger:hover .burger-strip div:first-child {
+   transform: rotate(45deg) translateY(1px) translateX(5px);
+   }
+   .burger:hover .burger-strip div:nth-child(2) {
+   transform: rotate(-45deg);
+   }
+   .burger:hover .burger-strip div:last-child {
+   transform: rotate(45deg) translateY(-13px) translateX(2px);
+   }
+   /*} colos icon endd*/
+   /*search icon*/
+   /*   .last-hed-srcicon{
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   background: white;
+   box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+   transition: all .5s ease;
+   color: black;
+   margin-right: -63px;
+   }*/
+   .last-hed-srcicon {position: absolute;right: 10px;top: 20px;}
+   .icon-backds{ 
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5px;
+   transition: all .5s ease;
+   color: #fff;
+   margin: 0px 17px;
+   }
+   /*old*/
+   .top-img-side{
+   height: 80px!important;
+   }
+   .fs-img-nev{
+   height: 17px!important;
+   margin-top: -27px;
+   }
+   .cent-text-nev{
+   font-size: small;
+   margin: 10px;
+   }
+   .nev-cent-text {
+   text-align: right;
+   letter-spacing: 0px;
+   color: #000000;
+   font-size: 21px;
+   font-weight: 700;
+   }
+   .close-mobile-menu{
+   /*   position: absolute;*/
+   margin-top: 20px;margin-bottom: 30px;
+   }
+   .burgercls {cursor: pointer;display: flex;justify-content: start;align-items: center;padding: 5px;transition: all .5s ease;transform: rotate(0deg);}
+   .showdv {display: none;}
+   .showdv p {letter-spacing: 0px;color: #F3F3F3;font-size: 13px;font-weight: normal;line-height: 15px;margin: 0px;font-family: Roboto;}
+   .showdv p i {padding-left: 8px;color: #FF10F0;}
+   .homeclick-btn {position: absolute;right: 20px;top: 20px;}
+   .top-menu li {list-style: none;}
+</style>
+<section>
+   <header class="header">
+      <nav class="navbar">
+         <button aria-label="Open Mobile Menu" class="open-mobile-menu">
+            <div class="wrap">
+               <div class="burger">
+                  <div class="strip burger-strip">
+                     <div></div>
+                     <div></div>
+                     <div></div>
+                  </div>
+               </div>
+            </div>
+         </button>
+        <!--  <div class="showdv">
+          <a href="create-chat-room.php"> <p>Create Group <i class="fas fa-plus"></i></p> </a>
+         </div> -->
+         <div class="homeclick-btn">
+            <a href="/home">
+               <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="32" height="32" x="0" y="0" viewBox="0 0 460.298 460.297" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M230.149 120.939 65.986 256.274c0 .191-.048.472-.144.855-.094.38-.144.656-.144.852v137.041c0 4.948 1.809 9.236 5.426 12.847 3.616 3.613 7.898 5.431 12.847 5.431h109.63V303.664h73.097v109.64h109.629c4.948 0 9.236-1.814 12.847-5.435 3.617-3.607 5.432-7.898 5.432-12.847V257.981c0-.76-.104-1.334-.288-1.707L230.149 120.939z" fill="#ffffff" data-original="#000000" class=""></path><path d="M457.122 225.438 394.6 173.476V56.989c0-2.663-.856-4.853-2.574-6.567-1.704-1.712-3.894-2.568-6.563-2.568h-54.816c-2.666 0-4.855.856-6.57 2.568-1.711 1.714-2.566 3.905-2.566 6.567v55.673l-69.662-58.245c-6.084-4.949-13.318-7.423-21.694-7.423-8.375 0-15.608 2.474-21.698 7.423L3.172 225.438c-1.903 1.52-2.946 3.566-3.14 6.136-.193 2.568.472 4.811 1.997 6.713l17.701 21.128c1.525 1.712 3.521 2.759 5.996 3.142 2.285.192 4.57-.476 6.855-1.998L230.149 95.817l197.57 164.741c1.526 1.328 3.521 1.991 5.996 1.991h.858c2.471-.376 4.463-1.43 5.996-3.138l17.703-21.125c1.522-1.906 2.189-4.145 1.991-6.716-.195-2.563-1.242-4.609-3.141-6.132z" fill="#ffffff" data-original="#000000" class=""></path></g></svg>
+            </a>
+           <!--  <button onclick="history.back()">
+         
+         </button> -->
+         </div>
+         <div class="top-menu-wrapper">
+            <ul class="top-menu">
+               <button aria-label="Close Mobile Menu" class="close-mobile-menu text-left">
+                  <div class="burgercls">
+                     <div class="strip burger-strip">
+                        <i class="fas fa-regular fa-arrow-left"></i>
+                     </div>
+                  </div>
+                  <i class="material-icons" aria-hidden="true"></i>
+               </button>
+               <li><a href="/favorite"><img src="/assets/images/svg/favorites.svg" class="icon-backds"> Favorites </a></li>
+               <li><a href="/listgoal"><img src="/assets/images/svg/edit-goals.svg" class="icon-backds"> My Goals </a></li>
+               <li><a href="/feedback"><img src="/assets/images/svg/edit-goals.svg" class="icon-backds"> Feedback </a></li>
+               <li><a href="/ulogout"><img src="/assets/images/svg/logout.svg" class="icon-backds lsticon"> Logout</a></li>
+            
+            </ul>
+         </div>
+      </nav>
+   </header>
+</section>
+<script>
+   const pageHeader = document.querySelector(".header");
+   const openMobMenu = document.querySelector(".open-mobile-menu");
+   const closeMobMenu = document.querySelector(".close-mobile-menu");
+   const topMenuWrapper = document.querySelector(".top-menu-wrapper");
+   const isVisible = "is-visible";
+   const showOffCanvas = "show-offcanvas";
+   const noTransition = "no-transition";
+   let resize;
+   
+   openMobMenu.addEventListener("click", () => {
+   topMenuWrapper.classList.add(showOffCanvas);
+   });
+   
+   closeMobMenu.addEventListener("click", () => {
+   topMenuWrapper.classList.remove(showOffCanvas);
+   });
+   
+   window.addEventListener("resize", () => {
+   pageHeader.querySelectorAll("*").forEach(function(el) {
+     el.classList.add(noTransition);
+   });
+   clearTimeout(resize);
+   resize = setTimeout(resizingComplete, 500);
+   });
+   
+   function resizingComplete() {
+   pageHeader.querySelectorAll("*").forEach(function(el) {
+     el.classList.remove(noTransition);
+   });
+   }
+   
+</script>

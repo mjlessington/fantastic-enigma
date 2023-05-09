@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+
+
+* { box-sizing:border-box; }
+body{
+  margin: 0px;
+  font-family: 'Manrope', sans-serif;
+}
+
+a {color: #4784FA;text-decoration: unset;}
+    
+h1 h2 h3 h4 h5 h6 p span {font-family: 'Manrope', sans-serif;}
+p {margin: 0px;}
+hr {margin: 0 auto;color: inherit;background-color: currentColor;border: 0;opacity: .25;width: 100%;position: absolute;left: 0px;}
+
+.main-iconalpg {position: relative;width: 100%;display: contents;}
+.home-btn {position: absolute;right: 20px;top: 20px;} 
+.specer {margin-top: 30px;}
+.back-btn {position: relative;}
+.back-btn button {background: transparent;border: 0px;position: absolute;left: 0px;padding: 5px;top: -10px;}
+.mainspacer {padding: 30px !important;}
+.mainsplshimg {width: 310px;z-index: 10000;position: relative;}
+/*splash screen*/
+.splash {background-color: #F2F2FF;left: 0;position: fixed;z-index: 200;height: 100vh;display: grid;align-items: center;width: 100%;}
+.splash.display-none{opacity: 0;left: 0;position: fixed;transition: all 3.9s;z-index: -10;}
+#fade-in{opacity: 0;animation: fadeIn 5.9s cubic-bezier(0.96, 0.04, 0.01, 0.91)forwards;}
+/*splash screen endd*/
+
+.form-label {letter-spacing: 0px;color: #000000;font-size: 14px;line-height: 18px;font-weight: 400;font-family: Manrope;}
+.form-control {padding: 15px;background: #FFFFFF;border: 1px solid #EFEFEF;border-radius: 8px;text-align: left;letter-spacing: 0px;color: #000000 !important;font-size: 14px;line-height: 18px;font-weight: 400;}
+
+.btmset-splsh {position: absolute;bottom: 0px;}
+.mian-plstxt {text-align: center;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 30px;line-height: 35px;font-family: Manrope;letter-spacing: 0px;color: #000000;padding: 30px 0px;position: relative;z-index: 10000;}
+
+.main-conthm {background-image: url(../images/tpback-img.png);background-size: contain;background-position: top;background-repeat: no-repeat;padding: 40px;}
+.main-conthm h3 {text-align: left;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 800;font-stretch: normal;font-size: 29px;line-height: 40px;font-family: Manrope;letter-spacing: 0px;color: #FFFFFF;margin-top: 25px;}
+.main-conthm p {text-align: left;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: normal;font-stretch: normal;font-size: 20px;line-height: 27px;font-family: Manrope;letter-spacing: 0px;color: #FFFFFF;}
+.mainboxxhm {margin-top: 8%;background: linear-gradient(180deg, rgba(255,255,255,0.8) 35%, rgba(255,255,255,1) 100%);border-radius: 10px;backdrop-filter: blur(30px);padding: 25px;}
+.btn-hmmain {background: #4784FA;border-radius: 8px;text-align: center;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: bold;font-stretch: normal;font-size: 20px;line-height: 27px;font-family: Manrope;letter-spacing: 0px;color: #FFFFFF;width: 100%;padding: 10px;border: 0px solid transparent;}
+.mainboxxhmlst p {text-align: center;letter-spacing: 0px;color: #000000;font-size: 14px;line-height: 18px;font-weight: 400;font-family: Manrope;}
+.main-conthm .dwntxthm {text-align: center;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: normal;font-stretch: normal;font-size: 29px;line-height: 40px;font-family: Manrope;letter-spacing: 0px;color: #000000;}
+
+
+/*signup pages*/
+.sectboxxsignup .radio {display: flex;padding: 5px 0px;align-items: center;justify-content: center;}
+.sectboxxsignup input[type="radio"] {appearance: none;display: none;}
+.sectboxxsignup label {display: flex;justify-content: center;align-items: center;width: 33.333%;height: 40px;overflow: hidden;transition: linear 0.3s;background: #FFFFFF;border: 1px solid #8888882E;border-radius: 8px;text-align: center;letter-spacing: 0px;color: #000000;font-size: 14px;line-height: 18px;font-weight: 400;font-family: Manrope;margin: 0px 3px;}
+.sectboxxsignup input[type="radio"]:checked + label {background: #4784FA;border: 1px solid #8888882E;border-radius: 8px;transition: 0.3s;color: #fff;}
+.rdobtndwnpg {background: #FFFFFF;border: 1px solid #8888882E;border-radius: 8px;display: flex;align-items: center;justify-content: space-around;padding: 5px 0px;}
+.mainrdolbl .form-label {text-align: left;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: normal;font-stretch: normal;font-size: 20px;line-height: 27px;font-family: Manrope;letter-spacing: 0px;color: #000000;}
+.rdobtnfuledt .form-check {background: #FFFFFF;border: 1px solid #8888882E;border-radius: 8px;padding: 10px 20px;margin: 10px 0px;}
+.rdobtnfuledt .form-check .form-check-input {float: right;}
+.main-conthm .dwntxtsiguppg {text-align: center;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 23px;line-height: 32px;font-family: Manrope;letter-spacing: 0px;color: #000000;}
+.pstnrltv {position: relative;}
+.snguppg-lstcont {border: 2px solid #61A6FF;position: absolute;width: 90%;left: -40px;margin: 20px 0px;}
+.snguppg-lstcont .subway-item:before{
+       content: '';
+       display: inline-block;
+       width: 15px;
+       height: 15px;
+       -moz-border-radius: 7.5px;
+       -webkit-border-radius: 7.5px;
+       border-radius: 7.5px;
+       background-color: #69b6d5;
+    }
+.snguppg-lstcont i {position: absolute;top: -39px;right: -77px;background: #61a6ff;padding: 30px;border-radius: 100%;height: 75px;width: 75px;color: #fff;font-size: 20px;text-align: center;}
+
+/*homepgaes*/
+.owl-nav {display: none;}
+.homepg-tpbg {background-image: url(../images/hmback-img.png);background-size: contain;background-position: top;background-repeat: no-repeat;}
+.homemaintxt h3 {text-align: center;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 20px;line-height: 27px;font-family: Manrope;letter-spacing: 0px;color: #FFFFFF;padding: 10px 0px;}
+.goaladd-cont {margin-top: 30px;}
+.goaladd-cont ul {padding-inline-start: 0px;}
+.goaladd-cont ul li i {position: absolute;top: 50%;transform: translate(0, -50%);left: -8px;}
+.goaladd-cont ul li:nth-child(1) {background: #82C1FF2E;border-radius: 6px;padding: 15px;text-align: left;letter-spacing: 0px;color: #0080FF;font-size: 17px;line-height: 23px;font-weight: 500;margin: 10px 0px;list-style: none;position: relative;}
+.goaladd-cont ul li:nth-child(2) {background: #E4BAFF29 ;border-radius: 6px;padding: 15px;text-align: left;letter-spacing: 0px;color: #9A00FF;font-size: 17px;line-height: 23px;font-weight: 500;margin: 10px 0px;list-style: none;position: relative;}
+.goaladd-cont ul li:nth-child(3) {background: #FFBF9724;border-radius: 6px;padding: 15px;text-align: left;letter-spacing: 0px;color: #FF6600;font-size: 17px;line-height: 23px;font-weight: 500;margin: 10px 0px;list-style: none;position: relative;}
+.goaladd-cont ul li:nth-child(4) {background: #272ca724;border-radius: 6px;padding: 15px;text-align: left;letter-spacing: 0px;color: #327f9d;font-size: 17px;line-height: 23px;font-weight: 500;margin: 10px 0px;list-style: none;position: relative;}
+.goaladd-cont ul li:nth-child(5) {background: #9ce50c24;border-radius: 6px;padding: 15px;text-align: left;letter-spacing: 0px;color: #8cad26;font-size: 17px;line-height: 23px;font-weight: 500;margin: 10px 0px;list-style: none;position: relative;}
+
+/*favrite pages*/
+.contbg-fvrtimg {background-image: url(../images/sonuplsh-bgimg.png);background-size: contain;background-position: top;background-repeat: no-repeat;padding: 8px;}
+.maintxtfvpg h3 {ext-align: center;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 20px;line-height: 27px;font-family: Manrope;letter-spacing: 0px;color: #FFFFFF;padding: 30px 0px;}
+.card-detail {background: #FFFFFF;box-shadow: 0px 3px 6px #00000012;border-radius: 9px;padding: 10px;text-align: center;}
+.card-detail h3 {text-align: left;letter-spacing: 0px;color: #000000;font-size: 16px;line-height: 26px;font-weight: 400;margin-bottom: 2px;font-family: Manrope;}
+.card-detail p {text-align: left;letter-spacing: 0px;color: #6E6C6C;font-size: 13px;line-height: 17px;font-weight: normal;margin-bottom: 0px;font-family: Manrope;}
+.card {position: relative;border: 0px solid rgba(0,0,0,.125);border-radius: 14px;}
+.tpcrd-icon {position: absolute;height: 25px;top: 20px;left: 20px;}
+/*plaeyr pages*/
+.plyrpg {background: linear-gradient(180deg, rgba(255,255,255,0.8) 35%, rgba(255,255,255,1) 100%);backdrop-filter: blur(30px);box-shadow: 0px 3px 6px #00000012;border-radius: 9px;padding: 20px;}
+.plyrpg p {text-align: left;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 19px;line-height: 25px;font-family: Manrope;letter-spacing: 0px;color: #000000;margin-bottom: 8px;}
+
+/*Goal Tital pages*/
+.goalpgcont {background-image: url(../images/sonuplsh-bgimg.png);background-size: contain;background-position: top;background-repeat: no-repeat;}
+.goalpgcont .mainspacer {padding: 30px !important;}
+.txtcont-tpgoalpg h3 {text-align: left;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 20px;line-height: 27px;font-family: Manrope;letter-spacing: 0px;color: #FFFFFF;}
+.txtcont-tpgoalpg p {text-align: left;letter-spacing: 0px;color: #FFFFFF;font-size: 13px;line-height: 15px;font-weight: normal;}
+.icongoalpg i {background: #08a4ff;padding: 10px;border-radius: 30px;color: #fff;margin-top: 20px;}
+.ceckboxglpg {/*background: #FFFFFF;border-radius: 8px;text-align: left;letter-spacing: 0px;color: #000000;font-size: 13px;line-height: 15px;font-weight: 400;*/ padding: 15px !important;font-family: Manrope;}
+.lsttxtgoal p {letter-spacing: 0px;color: #000000;font-size: 13px;line-height: 15px;font-weight: 500;text-align: center;margin-bottom: 10px;font-family: Manrope;}
+
+/*goal pg det add*/
+.goaldel {background-image: url(../images/sonuplsh-bgimg.png);background-size: cover;background-position: bottom;background-repeat: no-repeat;padding: 15px;}
+.goaltbl {background: linear-gradient(180deg, rgba(255,255,255,0.8) 35%, rgba(255,255,255,1) 100%);border-radius: 10px;backdrop-filter: blur(30px);padding: 10px;}
+.goaltbl thead tr {text-align: left;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 17px;line-height: 25px;font-family: Poppins;letter-spacing: 0px;color: #000000;}
+.goaltbl thead th {text-align: left;font-style: normal;font-variant-caps: normal;font-variant-ligatures: normal;font-variant-numeric: normal;font-variant-east-asian: normal;font-weight: 600;font-stretch: normal;font-size: 17px;line-height: 25px;font-family: Poppins;letter-spacing: 0px;color: #000000;}
+.goaltbl thead tr th:nth-child(3) {text-align: right;}
+.goaltbl thead tr th:nth-child(4) {text-align: right;}
+.goaltbl tbody tr td:nth-child(3) {text-align: right;}
+.goaltbl tbody tr td:nth-child(4) {text-align: right;}
+
+.index .contind {background: #F2F2FF;height: 100vh;}
+.signup .container {background: #F2F2FF;}
+.homepg .container {background-color: #F2F2FF;height: 100vh;}
+.homepg .tpcrd-icon {width: auto !important;top: 10px;left: 10px;}
+.playerpg .container {background-color: #F2F2FF;height: 100vh;}
+.addgoals .container {background-color: #F2F2FF;height: 100vh;}
+.favritepg .container {background-color: #F2F2FF;}
+.listgoal .container {background-color: #F2F2FF;height: 100vh;}
+.viewgoal .container {background-color: #F2F2FF;height: 100vh;}
+.feedback .container {background-color: #F2F2FF;height: 100vh;}
+
+.addgoals .strip {display: none;}
+.favritepg .strip {display: none;}
+
+/*music-player */
+
+.player {width: 100%;background: #fff;display: flex;flex-direction: column;padding: 20px;border-radius: 9px;box-shadow: 0px 3px 6px #00000012;overflow: hidden;transition: all ease 0.2s;}
+@media screen and (max-width: 768px) {.player {max-width: 100%;}}
+.player.dark svg {fill: #373737;}
+.player.dark .head .toggle .sun {display: block;}
+.player.dark .head .toggle .moon {display: none;}
+.player .head {display: flex;justify-content: space-between;align-items: center;gap: 0.5em;display: none;}
+.player .head .toggle .sun {display: none;}
+.player .icon {cursor: pointer;transition: all ease 0.5s;display: none;}
+.player .icon:hover {opacity: 0.5;}
+.player .button {cursor: pointer;min-width: 2.5em;height: 2.5em;display: flex;justify-content: center;align-items: center;padding: 0.5em;border-radius: 50%;background: var(--bg-secundary);transition: all ease 0.5s;}
+.player .button:hover {opacity: 0.75;}
+.player .main {height: 50%;display: flex;flex-direction: column;justify-content: center;align-items: center;gap: 0.5em;display: none;}
+.player .main > * {margin: 0;}
+.player .main .cover {min-width: 12.5em;min-height: 12.5em;display: flex;justify-content: center;align-items: center;background-image: url("https://charts-static.billboard.com/img/2015/06/post-malone-8w9-180x180.jpg");background-size: cover;background-position: center;background-repeat: no-repeat;border-radius: 50%;animation: spin linear 3s infinite;}
+.player .main .cover.pause {animation-play-state: paused;}
+.player .main .artist {font-size: 0.75em;color: #6b6b6b;}
+.player .favorite {user-select: none;display: none;}
+.player .favorite .favorite-icon {cursor: pointer;}
+.player .favorite .favorite-icon path {transition: all ease-out 0.25s;}
+.player .favorite .favorite-icon.empty path {fill: #9c9c9c;}
+.player .timeline .time {display: flex;justify-content: space-between;font-family: monospace;}
+.player .timeline .player-timeline {-webkit-appearance: none;width: 100%;height: 8px;background: #bfbfbf;border-radius: 8px;overflow: hidden;}
+.player .timeline .player-timeline::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;cursor: pointer;box-shadow: -407px 0 0 400px #4784FA;width: 16px;height: 16px;background: #fff;border-radius: 50%;}
+.player .timeline .player-timeline::-moz-range-thumb {cursor: pointer;width: 16px;height: 16px;background: #fff;box-shadow: 0 0 5px #00000080;border-radius: 50%;}
+.player .favorite {width: fit-content;margin-left: auto;padding: 0.5em;}
+.player .buttons {display: flex;justify-content: center;align-items: center;margin: 5px 0;}
+.player .buttons .button {min-width: 4em;min-height: 4em;}
+.player .buttons .button.play {min-width: 50px;min-height: 50px;background: #4784FA;transition: all ease 0.5s;}
+.player .buttons .button.play .pause-icon {display: block;}
+.player .buttons .button.play.pause {background: #4784FA;}
+.player .buttons .button.play.pause .pause-icon {display: block;}
+.player .buttons .button.play.pause .play-icon {display: none;}
+.player .block {width: 128px;height: 8px;margin: auto;margin-top: auto;border-radius: 8px;background: var(--bg-secundary);}
+.agbtn{text-align:right;}
+/* .agbtn a{display:inline-block;padding:10px 15px;color:#fff;background:#4784FA;margin-bottom:15px;border-radius:5px;} */
+.main-img {height: 160px;}
+.card-title {float: left;font-size: 1.1rem;font-weight: 400;margin: 0;color: black;}
+.goaltitle {display: inline-block;align-items: center;}
+.goaltitle h6 {margin-bottom: 0;}
+.viewgoald{margin-top:20px;}
+.alert-success1 {color: white;background-color: #28a745;border-color: #23923d;margin: 20px 0px;}
+.alert-success1 button.close {float: right;font-size: 1.5rem;font-weight: 700;line-height: 1;color: #000;text-shadow: 0 1px 0 #fff;opacity: .5;background-color: transparent;border: 0;}
+.contbg-fvrtimg1 {background-image: url(../images/sonuplsh-bgimg.png);background-size: cover;background-position: top;background-repeat: no-repeat;padding: 8px;height: 65vh;}
+@keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}

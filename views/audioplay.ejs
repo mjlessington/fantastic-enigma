@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <%- include('front_parts/header.ejs') %>
+      <link rel="stylesheet" type="text/css" href="/assets/css/player.css">
+   </head>
+   <body class="<%= page_name %>">
+       <%- include('front_parts/sidebar.ejs') %>
+
+      <section>
+         <div class="container">
+            <div class="row homepg-tpbg">
+               <div class="col-12 text-center homemaintxt">
+                  <h3>Repetition - The Hack To Success</h3>
+               </div>
+               <div class="mainspacer pt-0">
+                  <div class="col-12 plyrpg " id="word_output">
+                   
+                  </div>
+                  
+                  <div class="col-12 mt-3 music-plyer">
+                     <div id="player" class="player dark">
+                     
+                            <div class="details">
+                              
+                              <div class="track-art"></div>
+                              <div class="track-name">Track Name</div>
+                              <div class="track-artist">Track Artist</div>
+                            </div>
+                            
+                            <div class="slider_container timeline">
+                              
+                              <input type="range" min="1" max="100" value="0" class="seek_slider player-timeline" onchange="seekTo()">
+                              
+                              <div class="time">
+                                  <span id="now" class="now current-time">0:23</span>
+                                  <span class="duration total-duration">3:13</span>
+                               </div>
+                            </div>
+                            <div class="buttons">
+                             
+                              
+                             <div id="play" class="play button playpause-track" onclick="playpauseTrack()">
+                              <svg class="play-icon" viewBox="0 0 448 512" width="1.2em" title="play">
+                                 <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" fill="#fff"></path>
+                              </svg>
+                           </div>
+                            </div>
+                            
+                        
+                     </div>
+                  </div>
+                  <div class="mb-4 mt-3">
+                     <a href="/listgoal"><button type="button" class="btn-hmmain">MY GOALS</button> </a>
+                     <div class="col-12 goaladd-cont">
+                        <ul>
+                               <% if(data2.length){
+                            for(var i = 0; i< data2.length; i++) { %>
+                            <li> <i class="fas fa-circle"></i> <%= data2[i].golas%></li>
+                          
+                            <% } } %>
+                        </ul>
+                     </div>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </section>
+      <script>
+          var audio_title = '<%= data[0].audiotitle %>';
+          var audio_cat = '<%= data[0].catname %>';
+          var audio_file = 'https://doseofmotivation.jdinfotech.net/assets/audio_files/<%= data[0].audiofile %>';
+          var audiowords = '<%- data[0].audiowords %>';
+      </script>
+      
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script src="/assets/js/player.js"></script>
+   </body>
+</html>

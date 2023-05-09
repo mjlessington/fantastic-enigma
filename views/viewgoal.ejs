@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <%- include('front_parts/header.ejs') %>
+   </head>
+   <body class="<%= page_name %>">
+       <%- include('front_parts/sidebar.ejs') %>
+       
+       <section>
+          <div class="container">
+             <div class="row goaldel">
+               <div class="col-12 mt-4 text-white">
+                  <div class="card card-default">
+                          <div class="card-header">
+                            <h3 class="card-title">View Goal</h3>
+                          </div>
+                          <!-- /.card-header -->
+                          <div class="card-body">
+                              <% if(data.length){
+                            for(var i = 0; i< data.length; i++) { 
+                            if(i%2==0) {
+                            %>
+                            <div class="alert alert-warning">
+                              <div class="row">
+                                  <div class="col-12 goaltitle">
+                                    <p><%= data[i].golas%></p>  
+                                  </div>
+                              </div>
+                              <div class="row viewgoald">
+                                  <div class="col-6 ">
+                                    <a href="/editgoal/<%= data[i].gid%>" style="float:left;" class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                  </div>
+                                  <div class="col-6 ">
+                                    <a href="/delgoal/<%= data[i].gid%>" style="float:right;" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this goal?');"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                  </div>
+                              </div>
+                            </div>
+                             <% } else{ %>
+                            <div class="alert alert-info ">
+                              <div class="row">
+                                  <div class="col-12 goaltitle">
+                                     <p><%= data[i].golas%></p>
+                                  </div>
+                              </div>
+                              <div class="row viewgoald">
+                                  <div class="col-6 ">
+                                    <a href="/editgoal/<%= data[i].gid%>" style="float:left;" class="btn btn-success btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                  </div>
+                                  <div class="col-6 ">
+                                    <a href="/delgoal/<%= data[i].gid%>" style="float:right;" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this goal?');"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                  </div>
+                              </div>
+                            </div>
+                           <% } } } %>
+                           
+                          </div>
+              <!-- /.card-body -->
+            </div>
+        </div>
+                           
+             </div>
+           
+          </div>
+       </section>
+
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script>
+       
+function remove_tr(id)
+
+{
+   $('#row'+id).remove();
+}
+      </script>
+   </body>
+</html>

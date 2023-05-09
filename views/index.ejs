@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <%- include('front_parts/header.ejs') %>
+   </head>
+   <body class="<%= page_name %>">
+      <section>
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <div class="splash">
+                     <div class="col-xs-12 text-center">
+                     <img src="/assets/images/spalsh.png" class="img-fluid mainsplshimg">
+                     <h3 class="mian-plstxt">The two minutes for me</h3>
+                     </div>
+                     <div class="col-12 text-center btmset-splsh">
+                        
+                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="317" viewBox="0 0 428 317">
+                       <defs>
+                         <clipPath id="clip-path">
+                           <rect id="Rectangle_80" data-name="Rectangle 80" width="428" height="317" transform="translate(0 609)" fill="#fff" stroke="#707070" stroke-width="1"/>
+                         </clipPath>
+                       </defs>
+                       <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(0 -609)" clip-path="url(#clip-path)">
+                         <path id="Path_9340" data-name="Path 9340" d="M0,62.359s-6.032,72.313,118.968,72.313c62.125,0,99.9-86.4,175.359-106.662s139.2,0,139.2,0L426.3,456.465H0Z" transform="translate(0.047 590.265)" fill="#8988f3"/>
+                         <path id="Path_9339" data-name="Path 9339" d="M0,62.359s-6.032,72.313,118.968,72.313c62.125,0,99.9-86.4,175.359-106.662s139.2,0,139.2,0L426.3,456.465H0Z" transform="translate(0 667)" fill="#4e4ada"/>
+                         <path id="Path_9338" data-name="Path 9338" d="M0,0S73.163,81.043,198.163,81.043c62.125,0,108.43-30.468,168.128-50.619C426.635,10.055,500,0,500,0V630H0Z" transform="translate(-34 716)" fill="#373737"/>
+                       </g>
+                     </svg>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section>
+         <div class="container contind">
+            <div class="row">
+              <div class="col-12 text-center py-4 main-conthm">
+               <h3>LOGIN</h3>
+               <p>Login to your account.</p>
+                <% if (messages.ulogine) { %>
+            	<div class="alert alert-danger alert-dismissible">
+                      <%- messages.ulogine %>
+            	</div>
+                <% } %>
+               <div class="mainboxxhm">
+                 <form action="loginchk" method="post">
+                  <div class="mb-3">
+                    <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
+                    <input type="email" class="form-control" name="uemail" id="exampleFormControlInput1" placeholder="username@gmail.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <!-- <label for="exampleFormControlInput1" class="form-label">Email address</label> -->
+                    <input type="password" class="form-control" name="upwd" id="floatingPassword" placeholder="Password" required>
+                  </div>
+                  <div class="mb-4">
+                     <button type="submit" class="btn-hmmain">LOGIN</button>
+                  </div>
+                  </form>
+                  <div class="mb-2 mt-3"><a href="javascript:void(0)" id="loginlink">Reset Password</a></div>
+                  <div class="mb-3 text-center text-dark mainboxxhmlst"><p>No Account? <a href="signup" class="px-2">Create One</a></p></div>
+               </div>
+               <h3 class="dwntxthm">The best investment is the investment in self.</h3>
+              </div>
+            </div>
+         </div>
+      </section>
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script>
+         const splash = document.querySelector('.splash');
+                
+                document.addEventListener('DOMContentLoaded',(e)=>{
+                   setTimeout(()=>{
+                   splash.classList.add('display-none');
+                   }, 2500);
+                })
+      </script>
+   </body>
+</html>

@@ -1,0 +1,39 @@
+    @font-face {
+    font-family: 'Metropolis Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Regular'), url('Metropolis-Regular.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'Metropolis Semi Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Metropolis Semi Bold'), url('Metropolis-SemiBold.woff') format('woff');
+    }
+
+    @font-face {
+    font-family: 'Poppins Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Poppins Regular'), url('Poppins-Regular.woff') format('woff');
+    }        
+
+    @font-face {
+    font-family: 'Segoe UI Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI Regular'), url('Segoe UI.woff') format('woff');    
+    }
+
+    @font-face {
+    font-family: 'Albra';
+    src: url('Albra-Bold.eot');
+    src: local('Albra Bold'), local('Albra-Bold'),
+        url('Albra-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Albra-Bold.woff2') format('woff2'),
+        url('Albra-Bold.woff') format('woff'),
+        url('Albra-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    }

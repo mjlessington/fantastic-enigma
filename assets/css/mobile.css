@@ -1,0 +1,30 @@
+@media screen and (max-width: 767px){
+	.sectboxxsignup label {padding: 10px;width: auto;}
+}
+@media screen and (min-width: 768px){
+	.container {width: 576px;}
+	.maintxtfvpg h3 {padding: 40px 0px;}
+	.header {width: 576px;margin: 0 auto;}
+	.main-iconalpg {width: 576px;}
+
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+ 
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+
+}
+
+

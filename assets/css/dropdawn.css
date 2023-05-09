@@ -1,0 +1,67 @@
+li, a {
+  transition: background 0.35s ease;
+}
+
+/*Base*/
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+h1 {
+  font-size: 1.2em;
+}
+
+li {
+  font-size: 1em;
+}
+
+/*Layout*/
+/*Dropdown*/
+.dropdown {
+  margin: 2em auto;
+  width: 14.5em;
+  border: 0.1em solid #c0cdd1;
+}
+
+a {
+  display: block;
+  padding: 0.5em;
+  color: #000;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  background: #ecf0f1;
+}
+a:active {
+  background: #fbfcfc;
+}
+
+.fa {
+  float: right;
+}
+
+/*List*/
+ul {
+  display: none;
+  border-top: 0.1em solid #c0cdd1;
+}
+
+li {
+  padding: 0.5em;
+  cursor: pointer;
+}
+li:not(:first-child) {
+  border-top: 0.1em dashed #dde4e6;
+}
+li:last-child {
+  color: #ad0000;
+}
+li:focus, li:hover {
+  background: #ecf0f1;
+}
+li:active {
+  background: #fbfcfc;
+}

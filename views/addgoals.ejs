@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+   <head>
+       <%- include('front_parts/header.ejs') %>
+   </head>
+   <body class="<%= page_name %>">
+     <%- include('front_parts/sidebar.ejs') %>
+       <section>
+          <div class="container">
+             <div class="row goalpgcont pt-0">
+               <div class="col-12 px-3">
+                  <div class="back-btn">
+                     <button onclick="history.back()">
+                  <svg width="19.811" height="9.621" viewBox="0 0 19.811 9.621">
+                    <path id="Path_28" data-name="Path 28" d="M6.75,15.75,3,12m0,0L6.75,8.25M3,12H21" transform="translate(-1.939 -7.189)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                  </svg>
+                  </button>
+                  </div>
+               </div>
+               <div class="col-12 mainspacer">
+                   <form action="usgoaladd" method="post">
+                  <div class="col-12 txtcont-tpgoalpg mt-3">
+                     <h3>Goals</h3>
+                     <p>Add up to 5 Goals – Make sure to keep the Goal name short and sweet</p>
+                  </div>
+                  <div class="row mt-4">
+                   
+                  
+                     <div class="col-10 col-md-11">
+                        <div class="mb-2">
+                       <textarea class="form-control" id="exampleFormControlTextarea1 totalcounts" name="goals[]" required rows="2" placeholder="Enter Goal" maxlength="125"></textarea>
+                       <label for="exampleFormControlTextarea1"  class="form-label text-danger">Maximum 125 character</label>
+                     </div>
+                     </div>
+                     
+                     <div class="col-2 col-md-1 text-center icongoalpg" onclick="addmore()"><i class="fas fa-plus"></i></div>
+                     <input type="hidden" name="count" id="count" value="1">
+                      <div id="show_add_more"></div>
+                  </div>
+                  <div class="col-12 ceckboxglpg">
+                     <div class="form-check">
+                    <!--<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">If you want these goals read aloud to you, select this option: One-time payment of $1.”</label> -->
+                  </div>
+                  </div>
+                  <div class="mt-4">
+                <div class="mb-4 lsttxtgoal">
+                     <!-- <p>Goals can only be changed once every 3 months.</p> -->
+                     <button type="submit" class="btn-hmmain mt-2">SUBMIT</button>
+                  </div>
+                </div>
+                </form>
+               </div>
+             </div>
+          </div>
+       </section>
+
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script>
+      //var count = 1 ;
+       function addmore()
+        {       
+            
+            
+            var numItems = $('.totalcounts').length
+           var count=numItems;
+            if(count<4){
+            $("#show_add_more").append('<div class="row totalcounts" id="showdiv'+count+'"><div class="col-10 col-md-11" ><div class="mb-2"><textarea required name="goals[]" class="form-control" id="exampleFormControlTextarea1" rows="2" maxlength="125" placeholder="Description"></textarea><label for="exampleFormControlTextarea1" class="form-label text-danger">Maximum 125 character</label></div></div>'
+            +'<div class="col-2 col-md-1 text-center icongoalpg" onclick="remove('+count+')"><i class="fas fa-minus"></i></div></div>');
+            }
+            else{
+                alert('You Can Enter Only upto 5 Goals')
+            }
+            // count = parseInt(count)+1;
+           
+        }
+function remove(id)
+{
+    
+   $('#showdiv'+id).remove();
+ //  count = parseInt(count)-1;
+   
+}
+      </script>
+   </body>
+</html>

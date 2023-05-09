@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <%- include('front_parts/header.ejs') %>
+      <style>
+          .goalpg .container{height: calc(100vh - 28px);}
+          .goalpgcont{background-size: cover;min-height: 400px;}
+      </style>
+   </head>
+   <body class="<%= page_name %>">
+       <%- include('front_parts/sidebar.ejs') %>
+       
+       <section>
+          <div class="container">
+             <div class="row goalpgcont pt-0">
+              
+               <div class="col-12 mainspacer">
+                   <form action="userfeed" method="post">
+                  <div class="col-12 txtcont-tpgoalpg">
+                     <h3>Provide feedback or tell us if something is wrong.</h3>
+                  </div>
+                  <% if (messages.usefeed) { %>
+                	<div class="alert alert-success1 alert-dismissible">
+                         <%- messages.usefeed %>
+                	</div>
+                    <% } %>
+                  
+                  <div class="row mt-4">
+
+                     <div class="col-12 col-md-12">
+                        <div class="mb-2">
+                       <textarea class="form-control" id="exampleFormControlTextarea1" name="ufeedback" rows="10" required  placeholder="Description"></textarea>
+                     </div>
+                     </div>
+                  </div>
+
+                  <div class="mt-4">
+                <div class="mb-4 lsttxtgoal">
+                     <button type="submit" class="btn-hmmain mt-2">SUBMIT</button>
+                  </div>
+                </div>
+                </form>
+               </div>
+             </div>
+          </div>
+       </section>
+
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/popper.min.js"></script>
+      <script src="/assets/js/bootstrap.min.js"></script>   
+
+   </body>
+</html>
